@@ -1,0 +1,12 @@
+Todos os CREATE TABLE
+  Tabela de clientes
+-- customer_id: chave primária, identifica cada pedido feito por um cliente
+-- customer_unique_id: identifica a pessoa fisica, pode se repetir se ela comprou mais de uma vez
+-- zip_code como VARCHAR pra preservar zero a esquerda do CEP
+CREATE TABLE ecommerce_analytics.customers (
+    customer_id VARCHAR(32) NOT NULL PRIMARY KEY,
+    customer_unique_id VARCHAR(32) NOT NULL,
+    customer_zip_code_prefix VARCHAR(5) NOT NULL,
+    customer_city VARCHAR(100) NOT NULL,
+    customer_state VARCHAR(2) NOT NULL
+);
